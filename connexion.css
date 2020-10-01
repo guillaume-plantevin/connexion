@@ -2,3 +2,67 @@
     Toutes les pages doivent utiliser le même css.
     De beaux formulaires avec des inputs personnalisés sont toujours plus agréables pour l’utilisateur ! 
 */
+body
+{
+    text-align: center;
+}
+fieldset
+{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    /* {background-color: lawngreen; */
+    width: 50%;
+    /* text-align: center; */
+    background-color: aqua;
+    border: solid 5px black
+    
+}
+#list-hobbies
+{
+    display: flex;
+    flex-direction: row;
+}
+form.input-data
+{
+    display: table;
+}
+h1{
+    background-color: burlywood;
+}
+h2
+{
+    background-color: chartreuse;
+}
+h3
+{
+    background-color: chocolate;
+}
+label {
+    margin: 10px;
+}
+legend
+{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 22px;
+    text-align: center;
+
+}
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: burlywood;
+    text-align: center;
+    padding: 15px;
+  /* background-color: DarkSalmon; */
+    /* color: white; */
+}
+/* .footers-links
+{
+    
+} */
+.input-data
+{
+    margin-bottom: 8px;
+}
