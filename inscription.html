@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="connexion.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <title>Inscription</title>
     <!--
         La deuxième page doit avoir un formulaire complet:
         login (obligatoire), (OK) (OK)
-        mot de passe et confirmation du mot de passe (obligatoire), (OK)
+        mot de passe et confirmation du mot de passe (obligatoire), (OK) (OK)
         date de naissance formatée, 
         nom, (OK)
         prénom, (OK)
@@ -25,9 +27,10 @@
         Tous les champs doivent avoir des labels.
     -->
 </head>
+
 <body>
     <header>
-        <h1>Formulaire d'inscription</h1>    
+        <h1>Formulaire d'inscription</h1>
     </header>
     <main>
         <h3>Merci de remplir les champs suivants:</h3>
@@ -35,8 +38,8 @@
             <form method="post" action="connexion.html">
                 <!-- login -->
                 <div class="input-data">
-                    <label for="nom-utilisateur">Nom d'utilisateur:</label>                    
-                    <input type="text" id="nom-utilisateur" required> 
+                    <label for="nom-utilisateur">Nom d'utilisateur:</label>
+                    <input type="text" id="nom-utilisateur" required>
                 </div>
                 <!-- password -->
                 <div class="input-data">
@@ -50,95 +53,118 @@
                 </div>
                 <!-- birth date -->
                 <div class="input-data">
-                    <label for="date-naissance">Date de naissance (JJ/MM/AA):</label>                    
-                    <input type="date" id="date-naissance"> 
+                    <label for="date-naissance">Date de naissance (JJ/MM/AA):</label>
+                    <input type="date" id="date-naissance">
                 </div>
                 <!-- Prénom -->
                 <div class="input-data">
-                    <label for="prénom">Prénom:</label>                    
-                    <input type="text" id="prénom"> 
+                    <label for="prénom">Prénom:</label>
+                    <input type="text" id="prénom">
                 </div>
                 <!-- Nom -->
                 <div class="input-data">
-                    <label for="Nom">Nom:</label>                    
-                    <input type="text" id="Nom"> 
+                    <label for="Nom">Nom:</label>
+                    <input type="text" id="Nom">
                 </div>
                 <!-- mail -->
                 <div class="input-data">
-                    <label for="email">adresse email:</label>                    
-                    <input type="email" id="email" required> 
+                    <label for="email">adresse email:</label>
+                    <input type="email" id="email" required>
                 </div>
                 <!-- sexe -->
                 <div class="input-data">
-                    <label for="genre">sexe:</label>
-                    <input type="radio" name="genre" id="male" value="Homme" checked="checked"/> Homme
-                    <!-- <input type="radio" name="genre" id="genre-choice" value="Homme" checked="checked"/> Homme -->
-
-                    <input type="radio" name="genre" id="female" value="Femme"/> Femme
+                    <!-- <label for="genre">sexe:</label> -->
+                    Sexe:
+                    <label for="homme">Homme</label>
+                    <input type="radio" name="genre" id="homme" value="Homme" checked="checked"/>
+                    <label for="femme">Femme</label>
+                    <input type="radio" name="genre" id="femme" value="Femme"/>
                 </div>
-                
+
                 <!-- Niveau d'étude choix dans liste -->
                 <div class="input-data">
                     <label for="niveau-étude"> Quel est votre niveau d'étude:</label>
                     <select name="study" id="niveau-étude" required>
+                        <option value=""></option>
                         <option value="sans diplôme"> sans diplôme</option>
                         <option value="CAP, BEP"> CAP, BEP</option>
                         <option value="Baccalauréat"> Baccalauréat</option>
                         <option value="DEUG, BTS, DUT, DEUST"> Bac+2: DEUG, BTS, DUT, DEUST</option>
                         <option value="licence"> Bac+3: Licence</option>
                         <option value="maitrîse"> Bac+4: Maîtrise</option>
-                        <option value="Master, DEA, DESS, diplôme d'ingénieur"> Bac+5: Master, DEA, DESS, diplôme d'ingénieur</option>
+                        <option value="Master, DEA, DESS, diplôme d'ingénieur"> Bac+5: Master, DEA, DESS, diplôme
+                            d'ingénieur</option>
                         <option value="Doctorat"> Bac+8: Doctorat</option>
                     </select>
                 </div>
                 <!-- numéro de téléphone -->
                 <div class="input-data">
                     <label for="telephone">Téléphone:</label>
-                    <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" required>
-                </div>    
-                
+                    <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78"
+                        pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" required>
+                </div>
+
                 <!-- texte de présentation -->
                 <div class="input-data">
                     <label for="texte-présentation">Présentez-vous en quelques lignes:</label>
-                    <textarea name="texte-présentation"></textarea>
+                    <textarea name="texte-présentation" id="texte-présentation"></textarea>
                 </div>
-                
+
                 <!-- choix hobbies -->
-                <div class="input-data" id="list-hobbies">
-                    <label for="hobbies">Quels sont vos hobbies?<br />
-                        (vous pouvez en choisir autant que vous le souhaitez) <br />
-                    </label>
-                    <input type="checkbox" name="hobbies" value="cinéma"/> Cinéma
-                    <input type="checkbox" name="hobbies" value="théatre"/> Théatre
-                    <input type="checkbox" name="hobbies" value="lecture"/> Lecture
-                    <input type="checkbox" name="hobbies" value="photo"/> Photo <br />
-                    <input type="checkbox" name="hobbies" value="dessin"/> Dessin
-                    <input type="checkbox" name="hobbies" value="peinture"/> Peinture
-                    <input type="checkbox" name="hobbies" value="jeux vidéo"/> Jeux vidéo
-                    <input type="checkbox" name="hobbies" value="exposition"/> Exposition <br />
-                    <input type="checkbox" name="hobbies" value="chant"/> Chant
-                    <input type="checkbox" name="hobbies" value="dance"/> Dance
-                    <input type="checkbox" name="hobbies" value="pratique instrumentale"/> Pratique Instrumentale
-                    <input type="checkbox" name="hobbies" value="randonnée"/> Randonnée <br />
-                    <input type="checkbox" name="hobbies" value="chasse"/> Chasse
-                    <input type="checkbox" name="hobbies" value="pèche"/> Pèche
-                    <input type="checkbox" name="hobbies" value="survivalisme"/> survivalisme
-                    <input type="checkbox" name="hobbies" value="football"/> Football
-                    <input type="checkbox" name="hobbies" value="rugby"/> Rugby <br />
-                    <input type="checkbox" name="hobbies" value="sports de plage"/> Sports de plage
-                    <input type="checkbox" name="hobbies" value="sports d'hiver"/> Sports d'Hiver
-                    <input type="checkbox" name="hobbies" value="Jogging"/> Jogging <br />
-                    <input type="checkbox" name="hobbies" value="gym"/> Gym
-                    <input type="checkbox" name="hobbies" value="musculation"/> Musculation
-                    <input type="checkbox" name="hobbies" value="cuisine"/> Cuisine
+                <!-- CHOIX DE LA VERSION -->
+                <!-- <div class="input-data" id="list-hobbies"> -->
+                <div class="input-data">
+                    <!-- À améliorer -->
+                    <!-- ou mettre des div, il fait chier ce tableau... -->
+                    <table class="hobbies" id="liste-hobbies">
+                        <caption>
+                            Quels sont vos hobbies?<br />
+                            (vous pouvez en choisir autant que vous le souhaitez)
+                        </caption>
+                            <tr>
+                                <td><input type="checkbox" name="hobbies" value="cinéma" /> Cinéma</td>
+                                <td><input type="checkbox" name="hobbies" value="théatre" /> Théatre</td>
+                                <td><input type="checkbox" name="hobbies" value="lecture" /> Lecture</td>
+                                <td><input type="checkbox" name="hobbies" value="photo" /> Photo </td>
+                                <td><input type="checkbox" name="hobbies" value="dessin" /> Dessin</td>
+                                <td><input type="checkbox" name="hobbies" value="peinture" /> Peinture</td>
+                            </tr>
+                            <tr>
+
+                                <td><input type="checkbox" name="hobbies" value="jeux vidéo" /> Jeux vidéo</td>
+                                <td><input type="checkbox" name="hobbies" value="exposition" /> Exposition</td>
+                                <td><input type="checkbox" name="hobbies" value="chant" /> Chant</td>
+                                <td><input type="checkbox" name="hobbies" value="dance" /> Dance</td>
+                                <td><input type="checkbox" name="hobbies" value="pratique instrumentale" /> Pratique Instrumentale</td>
+                                <td><input type="checkbox" name="hobbies" value="cuisine" /> Cuisine</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="hobbies" value="randonnée" /> Randonnée <br /></td>
+                                <td><input type="checkbox" name="hobbies" value="chasse" /> Chasse</td>
+                                <td><input type="checkbox" name="hobbies" value="pèche" /> Pèche</td>
+                                <td><input type="checkbox" name="hobbies" value="survivalisme" /> Survivalisme</td>
+                                <td><input type="checkbox" name="hobbies" value="football" /> Football</td>
+                                <td><input type="checkbox" name="hobbies" value="rugby" /> Rugby <br /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="hobbies" value="marathon" /> Marathon</td>
+                                <td><input type="checkbox" name="hobbies" value="sports de plage" /> Sports de plage</td>
+                                <td><input type="checkbox" name="hobbies" value="sports d'hiver" /> Sports d'Hiver</td>
+                                <td><input type="checkbox" name="hobbies" value="Jogging" /> Jogging <br /></td>
+                                <td><input type="checkbox" name="hobbies" value="gym" /> Gym</td>
+                                <td><input type="checkbox" name="hobbies" value="musculation" /> Musculation</td>
+                            </tr>
+                    </table>
                 </div>
                 <div class="input-data">
-                    <label for="validate">Pour valider votre demande, appuyez sur le bouton<br />
-                        <input type="submit" id="validate" title="Vous serez diriger vers l'écran de connexion" value="validation"> </label>
+                    <label for="validate">Pour valider votre inscription, il vous suffit d'appuyer sur le bouton<br />
+                        <input type="submit" id="validate" title="Vous serez diriger vers l'écran de connexion"
+                            value="validation"> </label>
                 </div>
             </form>
         </fieldset>
-            </main>
-            
-        </body>
+    </main>
+
+</body>
+
 </html>
