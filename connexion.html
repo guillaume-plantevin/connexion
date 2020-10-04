@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="connexion.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap"
-        rel="stylesheet">
-
-    <title>Connexion</title>
-    <!-- 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="connexion2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap" rel="stylesheet">         <title>Connexion</title>
+        <!-- 
             la première contient un formulaire avec:
             login, mot de passe et un bouton de validation.
             En bas de ce formulaire se trouve un lien qui renvoie 
             vers la page de création de compte et la redéfinition de mot de passe. 
         -->
-</head>
+    </head>
 
-<body>
-    <header>
-        <h1>Connexion à votre compte</h1>
-    </header>
-    <main>
-        <fieldset>
-            <legend class="legend">Merci d'entrer vos identifiants pour vous connecter</legend>
-            <form method="post" action="#">
-                <div class="input-data">
-                    <label>nom d'utilisateur:<input type="text" id="surname"> </label>
+    <body>
+        <div class="page">
+            <header>
+                <h1>Connexion à votre compte</h1>
+            </header>
+            <main>
+                <fieldset class="connexion">
+                    <legend class="legend">Merci d'entrer vos identifiants pour vous connecter</legend>
+                    <form method="post" action="#">
+                        <div class="input-data">
+                            <label for="utilisateur">nom d'utilisateur:</label>
+                            <input type="text" id="utilisateur">
+                        </div>
+                        <div class="input-data">
+                            <label for="mot-de-passe">mot de passe:</label>
+                            <input type="password" id="mot-de-passe">
+                        </div>
+                        <div class="input-data">
+                            <input type="submit" value="Envoyer">
+                        </div>
+                    </form>
+                </fieldset>
+            </main>
+            <footer>
+                <div id="footers-links">
+                    <a id="footer-L" href="inscription.html">Inscription</a>
+                    <a id="footer-R" href="motdepasse.html">Réinitialisation du mot de passe</a>
                 </div>
-                <div class="input-data">
-                    <label>mot de passe:<input type="password" id="pass"></label>
-                </div>
-                <div class="input-data">
-                    <input type="submit" value="Envoyer">
-                </div>
-            </form>
-        </fieldset>
-    </main>
-    <footer class="footers-links">
-        <a href="inscription.html">Inscription</a>
-        <a href="motdepasse.html">Réinitialisation du mot de passe</a>
-
-    </footer>
-</body>
-
+            </footer>
+        </div>
+    </body>    
 </html>
