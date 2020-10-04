@@ -1,129 +1,90 @@
 /* 
-Toutes les pages doivent utiliser le même css.
-De beaux formulaires avec des inputs personnalisés sont toujours plus agréables pour l’utilisateur ! 
+#6464ff darkblue
+#b264ff purple
+#64fcff lightBlue
 */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+}
 body {
-  text-align: center;
-  background-image: url(images/circuit_green_wide.jpg);
+    text-align: center;
+    background-color: #64fcff;
 }
-header, footer
-{
-  display: inline-block;
-  font-family: 'Anton', sans-serif;
-  border: 2px solid black;
-  background-color: violet;
-  font-weight: bold;
+main {
+    font-family: 'Open Sans', sans-serif;
 }
-legend
-{
-  background-color: slategrey;
-  font-family: 'Piazzolla', serif;
-  font-size: 22px;
-  text-align: center;
+header, footer, .renvoi-mdp {
+    padding: 10px;
+    background-color: #6464ff80;
+    display: inline-block;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+header, footer {
+    font-family: 'Staatliches', cursive;
+}
+legend {
+    font-size: 22px;
+    /* text-align: center; */
 }
 footer {
-  display: inline-block;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  border: 2px solid;
-  /* color: white; */
-}
-/* test */
-#footer-L
-{
-  background-color: olive;
-}
-/* test */
-#footer-R
-{
-  background-color: mediumspringgreen;
+    font-size: 25px;
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border: 2px solid;
 }
 #footers-links {
-  display: flex;
-  justify-content: space-evenly;
-}
-#footer-links a{
-  border: 2px solid black;
-}
-form {
-  background-color: darkgoldenrod;
-  margin: 0 auto;
-  width: 60%;
-  padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
-}
-ul 
-{
-  list-style: none;
-}
-fieldset {
-  display: inline-block;
-  margin: 0px auto;
-  background-color: aqua;
-  border: 5px solid black;
-}
-/* .hobbies
-{
     display: flex;
-    flex-direction: row;
-} */
-/* #list-hobbies {
-  display: flex;
-  flex-direction: row;
-} */
-/* .art#list-hobbies
-{
-    display: flex;
-    flex-direction: column;
-} */
+    justify-content: space-evenly;
+}
+form.inscription {
+    background-color: #6464ff80;
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 1em;
+}
+fieldset.connexion {
+    display: inline-block;
+    margin: 0px auto;
+    border: 3px solid black;
+    border-radius: 1em;
+}
+fieldset.gender {
+    width: 300px;
+    margin: 0px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
 form.input-data {
-  display: table;
-}
-h1 {
-  background-color: burlywood;
-}
-h2 {
-  background-color: chartreuse;
-}
-h3 {
-  background-color: chocolate;
+    display: table;
 }
 label {
-  margin: 10px;
+    margin: 10px;
 }
-
 .input-data {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
-
-table
-{
-  border: 1px solid black;
-  /* border-collapse: collapse; */
+label {
+    /* Uniformise et aligne */
+    display: inline-block;
+    /* width: 140px; */
+    width: 200px;
+    text-align: right;
 }
-label 
-{
-  /* Uniformise et aligne */
-  display: inline-block;
-  /* width: 140px; */
-  width: 200px;
-  text-align: right;
+textarea, .hobbies {
+    vertical-align: top;
+    height: 5em;
 }
-
-input, textarea {
-  /* To make sure that all text fields have the same font settings
-      By default, textareas have a monospace font */
-  font: 1em sans-serif;
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
 }
-textarea {
-  /* Align multiline text fields with their labels */
-  vertical-align: top;
-
-  /* Provide space to type some text */
-  height: 5em;
-  }
