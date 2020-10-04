@@ -26,7 +26,6 @@ header, footer {
 }
 legend {
     font-size: 22px;
-    /* text-align: center; */
 }
 footer {
     font-size: 25px;
@@ -75,7 +74,6 @@ label {
 label {
     /* Uniformise et aligne */
     display: inline-block;
-    /* width: 140px; */
     width: 200px;
     text-align: right;
 }
